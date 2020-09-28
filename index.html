@@ -1,24 +1,427 @@
+<html>
+  <title></title>
+  <head></head>
+  <style>
 
-
-<title>Aryan Shreya</title>
-<style>
-
-body{
-  margin:0; padding:0;
-
-  background-color:lightcoral;
+html, body{
+ 
+ background-color:#2c3e50;
 }
-h1{padding-left:10px;font-family:Lobster;}
-p{font-family:Verdana; sans-serif;padding-left:20px;}
-</style>
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+.heart{
+   position: relative;
+   width: 200px;
+   height: 200px;
+   background-color:  #e74c3c;
+   top:70px;
+   left:100px;
+}
+.heart:before{
+   position: absolute;
+   bottom: 0px;
+   left: -100px;
+   width: 200px;
+   height: 200px;
+   content: '';
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -o-border-radius: 50%;
+   border-radius: 50%;
+   background-color:  #e74c3c;
+}
+.heart:after{
+   position: absolute;
+   top: -100px;
+   right: 0px;
+   width: 200px;
+   height: 200px;
+   content: '';
+    
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -o-border-radius: 50%;
+   border-radius: 50%;
+
+   background-color:  #e74c3c;
+}
+.heart{
+   -webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+   transform: rotate(45deg);
+}
+
+  </style>
+
+  <body>
+    <div style="margin-bottom: 300px;" class="heart"></div>
 
 
-<h1 style="font-size: 80px;">3 months completed jaan for our relationship...abhi to puri zindagi baki hai</h1>
-<h1>more to go ... </h1>
 
-  <h1 style="font-size: 100px;">I LOVE YOU.. JAAN</h1>
+<h1 style="font-size: 80px;" > I trust u more then anything </h1>
+<h1 style="font-size: 80px;" > I love u alot meri jaan .... mreri biwi</h1>
+<h1 style="font-size: 80px;" >Be my jaaan ......forever my love</h1>
 
-  <h1 style="font-size: 100px;">I LOVE YOU.. meri biwi</h1>
+<h1 style="font-size: 80px;">Dil main ho tum ... dhadkan bhi tum or jo main sochta ho likhta hoon code karta hoon ... sab tum</h1>
+<h1 style="font-size: 80px;"> Jaan zindagi ho tum meri </h1>
+
+<h1 style="font-size: 120px;"> Happiest birthday jaaan.....</h1>
+<h1 style="font-size: 50px;">please kabhi mat chor kar jana... sochna sa bhi darr lagta hai</h1>
+    <script>
+      var xmlns = "http://www.w3.org/2000/svg",
+  xlinkns = "http://www.w3.org/1999/xlink",
+  select = function(s) {
+    return document.querySelector(s);
+  },
+  selectAll = function(s) {
+    return document.querySelectorAll(s);
+  },
+    allStars = selectAll('.introStars g'),
+    allBgRings = selectAll('.bgRings circle'),
+    allTwirls = selectAll('.twirls path'),
+    allChars = selectAll('.mainText path'),
+    allGifts = selectAll('.gifts g'),
+    allSparkles = selectAll('.sparkles path'),
+    //posY = randomBetween(-26, -6),
+    numParticles = 850,
+    christmasSVG = select('.christmasSVG'),
+    introElf = select('.introElf'),
+    mainText = select('.mainText'),
+    tempDot = select('.tempDot'),
+    snowContainer = select('.snowContainer'),
+    snowSVG = select('.snowSVG'),
+    introTl
+  
+
+TweenMax.set('svg', {
+  visibility: 'visible'
+})
+TweenMax.staggerTo(allStars, 0, {
+ transformOrigin:'50% 50%',
+ autoAlpha:0
+},0);
+TweenMax.staggerTo(allTwirls, 0, {
+ drawSVG:'0% 0%'
+},0);
+TweenMax.set('.mainText', {
+
+ skewX:-12,
+ rotation:-9,
+ scale:1.2,
+ x:20,
+ //y:0,
+ transformOrigin:'50% 50%'
+});
+TweenMax.set(allGifts, {
+ scale:0,
+ transformOrigin:'50% 50%'
+})
+
+TweenMax.staggerTo(allSparkles, 0,{
+ cycle:{
+  scale:function(){
+   return 0
+  }
+ },
+ transformOrigin:'50% 50%'
+})
+CustomEase.create('charShimmer', 'M0,0 C0.274,0.02 0.132,1 0.5,1 0.958,1 0.59,0 1,0');
+CustomEase.create('starBurst', 'M0,0 C0.014,0.606 0.064,0.754 0.114,0.822 0.172,0.901 0.374,1 1,1');
+CustomEase.create('giftBurst', 'M0,0 C0.099,0.847 0.395,1.128 0.538,1.128 0.66,1.128 0.768,1.018 1,1');
+CustomEase.create('wobble', 'M0,0 C0.011,0.029 0.017,0.536 0.023,1.022 0.029,1.511 0.035,1.981 0.047,1.952 0.059,1.924 0.065,1.464 0.071,1.022 0.077,0.58 0.083,0.156 0.095,0.183 0.106,0.209 0.112,0.624 0.118,1.02 0.124,1.418 0.13,1.799 0.142,1.773 0.154,1.747 0.16,1.376 0.166,1.02 0.172,0.664 0.178,0.324 0.19,0.348 0.202,0.371 0.208,0.703 0.213,1.018 0.219,1.335 0.225,1.636 0.237,1.613 0.249,1.59 0.255,1.297 0.261,1.018 0.267,0.738 0.273,0.473 0.285,0.494 0.297,0.515 0.303,0.772 0.309,1.016 0.315,1.26 0.32,1.491 0.332,1.471 0.344,1.451 0.35,1.227 0.356,1.014 0.362,0.803 0.368,0.604 0.38,0.622 0.392,0.64 0.398,0.833 0.404,1.014 0.41,1.195 0.416,1.365 0.427,1.348 0.451,1.311 0.451,0.698 0.475,0.731 0.499,0.764 0.499,1.275 0.523,1.243 0.547,1.213 0.547,0.794 0.57,0.822 0.594,0.848 0.594,1.183 0.618,1.157 0.642,1.133 0.642,0.873 0.666,0.894 0.69,0.914 0.69,1.109 0.713,1.09 0.737,1.071 0.737,0.932 0.761,0.947 0.785,0.962 0.785,1.054 0.809,1.041 0.833,1.029 0.833,0.973 0.856,0.982 0.88,0.99 0.88,1.018 0.904,1.01 0.928,1.004 0.928,0.996 0.952,0.998 0.976,1 0.976,1 1,1');
+
+var mainTl = new TimelineMax({paused:true});
+var tl = new TimelineMax();
+var twirlsTl = new TimelineMax().timeScale(1.82);
+var snowTl = new TimelineMax();
+var giftsTl = new TimelineMax();
+var charTl = new TimelineMax();
+var sparklesTl = new TimelineMax();
+
+function makeTwirls(){
+ 
+ for(var i = 0; i < allTwirls.length; i++){
+  
+  var tl = new TimelineMax()
+  tl.to(allTwirls[i], 1, {
+   drawSVG:'0% 23%',
+   ease:Power1.easeIn
+  })
+  .to(allTwirls[i], 2, {
+   drawSVG:'61% 86%',
+   ease:Linear.easeNone
+  })
+  .to(allTwirls[i], 1, {
+   drawSVG:'100% 100%',
+   ease:Power1.easeOut
+  })
+  
+  twirlsTl.add(tl,(i+1)/1.5)
+  
+ }
+ 
+}
+function makeSnow(){
+ 
+ var i = numParticles, r, dot, dur, posX, posY, originX;
+ 
+ while(--i > -1){
+  
+  dot = tempDot.cloneNode(true);
+  snowContainer.appendChild(dot);
+  dur = randomBetween(20, 160)/10;
+  posX = randomBetween(-80, 880);
+  posY = randomBetween(-126, -186);
+  originX = randomBetween(-250, 250);
+  TweenMax.set(dot, {
+   x:posX,
+   y:posY,
+   scale:dur/10,
+   transformOrigin:'50% 50%',
+   autoAlpha:0
+  })
+  
 
   
+ }
+}
+
+//main anim
+tl.from('#introDot', 2, {
+ scale:26,
+ transformOrigin:'50% 50%',
+ ease:Power2.easeIn
+})
+.set(allStars, {
+ autoAlpha:1
+})
+.to('#introDot', 0.2, {
+ fillOpacity:0,
+ //strokeWidth:0,
+ ease:Expo.easeIn
+ //alpha:0
+},'-=0.2')
+.set(['.introElf', '.clickMeText'], {
+ autoAlpha:0
+ 
+})
+.staggerTo(allStars, 5, {
+ cycle:{
+  x:[0,-240,-210,100,210],
+  y:[-160,-100,230,200,0],
+  //attr:[{x:400, y:50}, {x:160, y:100},{x:130, y:400}, {x:380, y:550},{x:650, y:400}],
+  duration:[2,1.6,1.8,2.1],
+  rotation:[145, 167, 123, 112, 178]
+ },
+ transformOrigin:'50% 50%',
+ //svgOrigin:'400 300',
+ ease:'starBurst'
+},0)
+.staggerTo(allStars, 0.3, {
+ alpha:0,
+ scale:0,
+ rotation:'+=23',
+ ease:Power3.easeIn
+},0.1,'-=0.93')
+.staggerFrom(allBgRings, 1.5, {
+ scale:0,
+ transformOrigin:'50% 50%',
+ ease:Expo.easeOut
+},0.12, '-=2.1')
+.set(allGifts,{
+ //autoAlpha:1
+},'-=2.1')
+
+
+
+charTl.from('.mainText', 4, {
+ scale:0,
+ ease:Expo.easeInOut
+ 
+})
+ .staggerFrom(allChars, 2, {
+ scale:0,
+ y:100,
+ x:200,
+ alpha:0,
+ //svgOrigin:'200 277',
+ cycle:{
+  svgOrigin:['300 300']
+ },
+ transformOrigin:'50% 50%',
+ ease:Elastic.easeOut.config(0.6,0.8)
+},0.06,'-=2')
+
+ .staggerFrom('.fromChris path', 6, {
+ alpha:0,
+ rotation:-9,
+ transformOrigin:'50% 100%',
+ ease:'wobble'
+},0.06,'-=2')
+ .staggerFrom('.happyNewYearText path', 6, {
+ alpha:0,
+ rotation:-9,
+ transformOrigin:'50% 100%',
+ ease:'wobble'
+},0.06,'+=2')
+ .staggerTo([allChars, '.fromChris path'], 2, {
+ alpha:0, 
+ ease:Sine.easeIn
+},0.06,'-=8')
+
+/* .staggerTo(allChars, 4, {
+ 
+ alpha:0.75,
+ ease:'wobble',
+ repeat:8
+},0.1,'-=4') */
+
+
+
+
+makeTwirls();
+makeSnow();
+
+//sparkles
+
+sparklesTl.staggerTo(allSparkles, 1, {
+ cycle:{
+  scale:function(){
+   return 1
+  },
+  duration:[0.31,1.2,0.62,0.8,0.672]
+
+ },
+  repeat:9,
+  yoyo:true,
+ ease:Sine.easeInOut
+},0.05)
+
+//gifts
+giftsTl.staggerTo(allGifts, 9, {
+ cycle:{
+  x:[-260,-160,210, 200],
+  y:[-120,160,130, -200],
+  //attr:[{x:400, y:50}, {x:160, y:100},{x:130, y:400}, {x:380, y:550},{x:650, y:400}],
+  duration:[5,6,4,5.8],
+  rotation:[-370,  -390, 405, -340]
+ },
+ transformOrigin:'50% 50%',
+ scale:1,
+ //svgOrigin:'400 300',
+ ease:'starBurst'
+},0.06)
+
+//snow
+snowTl.staggerTo('.tempDot', 0.01, {
+ autoAlpha:1
+},0)
+ .staggerTo('.tempDot', 8, {
+cycle:{
+
+  y:function(i){
+   return randomBetween(810, 850)
+  },
+  duration:function(){
+   //console.log(this.getAttribute('r'))
+   return 10- (this.getAttribute('r'))
+  },
+  rotation:function(){
+   return randomBetween(-360, 1012)
+  },
+  transformOrigin:['120% -100%', '-200% 50%', '-200% -400%', '-180% -300%', '50% 250%' ]
+}, 
+repeat:10,
+ease:Linear.easeNone,
+ onComplete:function(){
+  TweenMax.set(this.target, {
+   autoAlpha:0
+  })
+ }
+},0.1)
+
+snowTl.seek(100);
+mainTl.add(tl);
+mainTl.add(twirlsTl, 1.05);
+mainTl.add(charTl, 2.3);
+mainTl.add(giftsTl, 2);
+mainTl.add(snowTl, 4);
+mainTl.add(sparklesTl, 4.5);
+
+
+///INTRO
+
+introTl = new TimelineMax({paused:true});
+  introTl.set(introElf, {
+   rotation:0,
+   transformOrigin:'50% 100%'
+  })
+   .from(introElf, 4, {
+   rotation:-43,
+   ease:'wobble',
+   immediateRender:false
+  })
+   .staggerTo(['.mouthOpen', '.mouthClosed'],0.1,{
+    cycle:{
+     alpha:[1, 0]
+     //scaleX:[1, 0]
+    }    
+   },0,'-=3')
+  .staggerTo('.clickMeText path', 0.3, {
+   scale:0,
+   y:'-=10',
+   alpha:0,
+   transformOrigin:'50% 100%',
+   ease:Sine.easeIn
+  },0.06,'-=4')
+  .to(document.body, 0.5, {
+   backgroundColor:'#1D1D1D'
+  },'-=4')
+
+
+
+//ScrubGSAPTimeline(mainTl);
+mainTl.vars.onStart = function(){
+ 
+ christmasSVG.onclick = function(e){
+  
+   TweenMax.staggerTo(['.mouthOpen', '.mouthClosed'],0,{
+    cycle:{
+     alpha:[0, 1]
+    },
+    delay:0
+   },0)  
+  
+  mainTl.pause(0);
+  introTl.pause(0);
+  
+  setElfClick();
+ }
+}
+
+
+function randomBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}  
+
+function setElfClick(){
+ 
+ christmasSVG.onclick = null;
+ 
+ introElf.onclick = function(e){
+ 
+  
+   introTl.play(0);
+   mainTl.play(0);
+
+   introElf.onclick = null;
+}
+ 
+}
+
+setElfClick();
+    </script>
+  </body>
+
+  
+</html>
